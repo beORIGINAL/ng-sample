@@ -1,13 +1,15 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-console.log(1236554);
+import Main from './components/main';
+
 (function () {
 	'use strict';
 
 	angular
 		.module('app', [
-			uiRouter
+			uiRouter,
+			Main
 		])
 		.component('ninjaComponent', {
 			template: '<input type="text" ng-model="$ctrl.greeting"/>'+
@@ -22,7 +24,7 @@ console.log(1236554);
 
 			$stateProvider
 				.state('app', {
-					url: '/',
+					url: '/app',
 					controller: 'appCtrl',
 					controllerAs: 'vm',
 					template: '<section>'+
