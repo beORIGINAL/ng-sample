@@ -12,10 +12,7 @@ export default function (config) {
 		basePath: '',
 		frameworks: [ 'jasmine' ],
 		files: [
-			// { pattern: '../node_modules/babel-polyfill/dist/polyfill.js', watched: false },
 			{ pattern: '../node_modules/phantomjs-polyfill/bind-polyfill.js', watched: false },
-			// { pattern: '../node_modules/angular/angular.js', watched: false },
-			// { pattern: '../node_modules/angular-mocks/angular-mocks.js', watched: false },
 			{ pattern: 'spec.bundle.js', watched: false }
 		],
 		exclude: [],

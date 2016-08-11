@@ -1,19 +1,25 @@
-class MainComponentController {
+export class MainComponentController {
+	/*@ngInject*/
 	constructor($timeout){
 		this.$timeout = $timeout;
-		this.messageModel = '';
+		this.x = 0;
+		this.y = 0;
 	}
 
-	sayHello (msg) {
-		this.$timeout(() => {alert(msg)}, 1000)
+	calculateSum (x, y = 1) {
+		alert(`Your sum is ${x + y}`);
+		return x + y;
 	}
 }
 
 export const MainComponent = {
 	controller: MainComponentController,
+	controllerAs: 'ctrl',
 	template: `<article>
 					<h1>I'm component</h1>
-					<input type="text" ng-model="$ctrl.messageModel">
-					<button ng-click="$ctrl.sayHello($ctrl.messageModel)">Say Hello</button>
+					<input type="number" ng-model="ctrl.x">
+					+
+					<input type="number" ng-model="ctrl.y">
+					<button ng-click="ctrl.calculateSum(ctrl.x)">calculate</button>
 				</article>`
 };
