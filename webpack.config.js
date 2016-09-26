@@ -3,7 +3,7 @@ var ProgressBarPlugin = require('progress-bar-webpack-plugin');
 var HtmlPlugin = require("html-webpack-plugin");
 var webpack = require("webpack");
 module.exports = {
-	devtool: 'cheap-module-eval-source-map',
+	devtool: 'inline-source-map',
 	context: __dirname + '/app',
 	entry: [
 		"webpack-hot-middleware/client?reload=true",
